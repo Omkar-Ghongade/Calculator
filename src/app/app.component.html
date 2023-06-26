@@ -1,22 +1,24 @@
 <div class="calci">
-  <input type="text" class="calculating" value="0" disabled />
+  <input type="text" class="calculating" value="{{input}}"  disabled />
+  <input type="text" class="calculating" value="{{result}}"  disabled />
   <div class="btn">
-    <button type="button" class="operator" value="+">+</button>
-    <button type="button" class="operator" value="-">-</button>
-    <button type="button" class="operator" value="*">&times;</button>
-    <button type="button" class="operator" value="/">&divide;</button>
-    <button type="button" value="7">7</button>
-    <button type="button" value="8">8</button>
-    <button type="button" value="9">9</button>
-    <button type="button" value="4">4</button>
-    <button type="button" value="5">5</button>
-    <button type="button" value="6">6</button>
-    <button type="button" value="1">1</button>
-    <button type="button" value="2">2</button>
-    <button type="button" value="3">3</button>
-    <button type="button" value="0">0</button>
-    <button type="button" class="decimal" value=".">.</button>
-    <button type="button" class="all-clear" value="all-clear">AC</button>
-    <button type="button" class="equal-sign" value="=">=</button>
+    <button type="button" class="operator" value="+" (click)="operatorr('+')">+</button>
+    <button type="button" class="operator" value="-" (click)="operatorr('-')">-</button>
+    <button type="button" class="operator" value="*" (click)="operatorr('*')">&times;</button>
+    <button type="button" class="operator" value="/" (click)="operatorr('/')">&divide;</button>
+    <button type="button" value="7" (click)="num('7')">7</button>
+    <button type="button" value="8" (click)="num('8')" >8</button>
+    <button type="button" value="9" (click)="num('9')">9</button>
+    <button type="button" value="9" (click)="clrr()">Clr</button>
+    <button type="button" value="4" (click)="num('4')">4</button>
+    <button type="button" value="5" (click)="num('5')">5</button>
+    <button type="button" value="6" (click)="num('6')">6</button>
+    <button type="button" value="1" (click)="num('1')">1</button>
+    <button type="button" value="2" (click)="num('2')">2</button>
+    <button type="button" value="3" (click)="num('3')">3</button>
+    <button type="button" value="0" (click)="num('0')">0</button>
+    <button type="button" class="decimal" value="." (click)="num('.')">.</button>
+    <button type="button" class="all-clear" value="0" (click)="clr()">AC</button>
+    <button type="button" class="equal-sign" value="=" (click)="ans()">=</button>
   </div>
 </div>
